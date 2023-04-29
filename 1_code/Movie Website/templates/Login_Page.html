@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Login - Awesome Theater</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #1c1c1c;
+        color: #fbbf24;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        padding: 20px;
+        text-align: center;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 36px;
+      }
+
+      main {
+        padding: 50px;
+        text-align: center;
+      }
+
+      form {
+        display: inline-block;
+        text-align: left;
+        background-color: #fff;
+        width: 500px;
+        padding: 50px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+      }
+
+      h2 {
+        font-size: 36px;
+        margin-bottom: 30px;
+      }
+
+      label {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      input[type="text"],
+      input[type="password"],
+      input[type="email"] {
+        border: none;
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+        margin-bottom: 20px;
+        width: 100%;
+        font-size: 16px;
+      }
+
+      button[type="submit"] {
+        background-color: #fbbf24;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+        margin-bottom: 20px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #1f2937;
+      }
+
+      .login-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .login-links a {
+        color: #fbbf24;
+        text-decoration: none;
+        font-size: 16px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .login-links a:hover {
+        color: #fff;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Awesome Theater</h1>
+    </header>
+    <main>
+      <form method="POST" action="{{ url_for('login') }}">
+        <h2>Login</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <button type="submit">Login</button>
+        <div class="login-links">
+          <a href="/Register_account">Don't have an account registered?</a>
+          <a href="/Forgot_your_password">Forgot account information?</a>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
