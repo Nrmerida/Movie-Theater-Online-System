@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Login - Awesome Theater</title>
+    <title>Enter Credit Card Information - Awesome Theater</title>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -99,18 +99,20 @@
       <h1>Awesome Theater</h1>
     </header>
     <main>
-      <form method="POST" action="{{ url_for('login') }}">
-        <h2>Login</h2>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+      <form method="POST" action="Payment.html">
+        <h2>Enter Credit Card Information</h2>
+        <label for="card_number">Card Number:</label>
+        <input type="text" id="card_number" name="card_number" required>
         <br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+        <label for="expiration_date">Expiration Date:</label>
+        <input type="text" id="expiration_date" name="expiration_date" required>
         <br>
-        <button type="submit">Login</button>
+        <label for="cvv">CVV:</label>
+        <input type="password" id="cvv" name="cvv" required>
+        <br>
+        <button type="submit">Submit Payment</button>
         <div class="login-links">
-          <a href="/Register_account">Don't have an account registered?</a>
-          <a href="/Forgot_your_password">Forgot account information?</a>
+          <a href="/">Cancel</a>
         </div>
       </form>
     </main>
